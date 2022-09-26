@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home page</title>
+
+    <style>
+      
+      body {
+        background: #7ac10d;
+        animation-name: running;
+        animation-duration: 34s;
+        animation-iteration-count: 1000;
+      }
+      p {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1{
+        font-family: Arial, Helvetica, sans-serif;
+        background-size: 100px 0px;
+        text-align: center;
+      }
+
+      *hex{
+        padding: 40px;
+        background: #7ac10d;
+      }
+
+
+      h5{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      @keyframes running {
+        0%   {background-color:#0098ff;}
+        10%  {background-color:#7ac10d;}
+        20%  {background-color:#0098ff;}
+        30%  {background-color:#7ac10d;}
+        40%  {background-color:#0098ff;}
+        50%  {background-color:#7ac10d;}
+        60%  {background-color:#0098ff;}
+        70%  {background-color:#7ac10d;}
+        80% {background-color:#0098ff;}
+        90%  {background-color:#7ac10d;}
+        100% {background-color:#0098ff;}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hex">
+      <h1 id="why">Home page</h1>
+    </div>
+
+    <br>
+    <h5 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">This website is an initiative game what will test your speed and reflexs with a mouse.<br><br><br>RULES<br>1. HOW the game works, to win the game you have to click on the color changing box<br>2. Every time you win or click the box on time you will get a point each point will make you go to the next level
+    <br><br><br><br>Note that each time you go up a level the game will get faster and harder</h5>
+
+    <button id="animated_div" style="background: #7ac10d; border-style: hidden;" onclick="myFunction()">Click me</button>
+    <input type="button" id="animated_div" style="background: #7ac10d; border-style: hidden;" onclick="myFunction()">
+    <script>
+      myFunction() {
+        document.getElementById("why").innerHTML = "Hello World";
+      }
+    </script>
+    <style> 
+      #animated_div {
+        width:70px;
+        height:60px;
+        background: #0098ff;
+        color: #0098ff;
+        position: relative;
+        font-weight:bold;
+        font-size:20px;
+        padding:10px;
+        animation:animated_div 5s 1;
+        -moz-animation:animated_div 5s 1;
+        -webkit-animation:animated_div 5s 1;
+        -o-animation:animated_div 5s 1;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        animation-iteration-count: 1000;
+      }
+
+      @keyframes animated_div
+      {
+        0% {transform: rotate(0deg);left:0px;}
+        25% {transform: rotate(20deg);left:0px;}
+        50% {transform: rotate(0deg);left:1000px;}
+        55% {transform: rotate(0deg);left:1000px;}
+        70% {transform: rotate(0deg);left:500px;background:#7ac10d;}
+        100% {transform: rotate(-360deg);left:0px;}
+      }
+
+      @-webkit-keyframes animated_div
+      {
+        0% {-webkit-transform: rotate(0deg);left:0px;}
+        25% {-webkit-transform: rotate(20deg);left:0px;}
+        50% {-webkit-transform: rotate(0deg);left:1000px;}
+        55% {-webkit-transform: rotate(0deg);left:1000px;}
+        70% {-webkit-transform: rotate(0deg);left:500px;background:#7ac10d;}
+        100% {-webkit-transform: rotate(-360deg);left:0px;}
+      }
+
+      @-moz-keyframes animated_div
+      {
+        0%  {-moz-transform: rotate(0deg);left:0px;}
+        25% {-moz-transform: rotate(20deg);left:0px;}
+        50%  {-moz-transform: rotate(0deg);left:1000px;}
+        55%  {-moz-transform: rotate(0deg);left:1000px;}
+        70%  {-moz-transform: rotate(0deg);left:500px;background:#7ac10d;}
+        100% {-moz-transform: rotate(-360deg);left:0px;}
+      }
+
+      @-o-keyframes animated_div
+      {
+        0% {transform: rotate(0deg);left:0px;}
+        25% {transform: rotate(20deg);left:0px;}
+        50%  {transform: rotate(0deg);left:1000px;}
+        55%  {transform: rotate(0deg);left:1000px;}
+        70%  {transform: rotate(0deg);left:500px;background:#7ac10d;}
+        100% {transform: rotate(-360deg);left:0px;}
+      }
+    </style>
+  </body>
+</html>
